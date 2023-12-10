@@ -51,7 +51,11 @@ _Note: Ensure you have Python 3.8 installed on your system._
    ```bash
    source .venv/bin/activate
    ```
-3. Run the camera feed receiver script with Python 3.8:
+3. Limit OpenMP threads (needed for performance)
+   ```
+   export OMP_NUM_THREADS=1
+   ```
+4. Run the camera feed receiver script with Python 3.8:
    ```bash
    python3.8 camera_feed_receiver.py
    ```
