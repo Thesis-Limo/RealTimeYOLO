@@ -44,7 +44,7 @@ _Note: Ensure you have Python 3.8 installed on your system._
    python2.7 camera_feed_caster.py
    ```
 
-### Step 3: Start the Image Receiver
+### Step 3: Start the YOLOv8 on the image feed
 
 1. **Open a third terminal**.
 2. Activate the Python 3.8 virtual environment:
@@ -57,7 +57,7 @@ _Note: Ensure you have Python 3.8 installed on your system._
    ```
 4. Run the camera feed receiver script with Python 3.8:
    ```bash
-   python3.8 camera_feed_receiver.py
+   python3.8 camera_feed_processor.py
    ```
 
 ## Notes
