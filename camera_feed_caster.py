@@ -18,9 +18,11 @@ def image_callback(msg, clientsocket):
 
 def start_server():
     rospy.init_node('camera_server')
+    print("Starting server...")
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     serversocket.bind(('localhost', 23001))
     serversocket.listen(5)
+    print("Waiting for a connection...")
     clientsocket, address = serversocket.accept()
     rospy.Subscriber("/camera/rgb/image_raw", Image, image_callback, clientsocket)
     print("Connected to", address)

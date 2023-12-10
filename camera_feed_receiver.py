@@ -3,9 +3,11 @@ import cv2
 import numpy as np
 
 def receive_images():
+    print("Connecting to socket...")
     clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     clientsocket.connect(('localhost', 23001))
     data = b""
+    print("Receiving data...")
     while True:
         packet = clientsocket.recv(4096)
         if not packet: break
