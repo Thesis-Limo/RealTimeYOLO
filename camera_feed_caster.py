@@ -23,6 +23,7 @@ def start_server():
     serversocket.listen(5)
     clientsocket, address = serversocket.accept()
     rospy.Subscriber("/camera/rgb/image_raw", Image, image_callback, clientsocket)
+    print("Connected to", address)
     rospy.spin()
     clientsocket.close()
     serversocket.close()
