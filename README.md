@@ -18,6 +18,8 @@ In your project directory:
 ```bash
 python3.8 -m venv .venv
 source .venv/bin/activate
+# Update pip
+pip install --upgrade pip
 # Install necessary packages
 pip install -r requirements.txt
 ```
@@ -37,12 +39,7 @@ _Note: Ensure you have Python 3.8 installed on your system._
 ### Step 2: Start the Camera Feed Caster
 
 1. **Open a second terminal**.
-2. Navigate to your script's directory.
-3. Source the ROS environment:
-   ```bash
-   source /opt/ros/melodic/setup.bash
-   ```
-4. Run the camera feed caster script with Python 2.7:
+2. Run the camera feed caster script with Python 2.7:
    ```bash
    python2.7 camera_feed_caster.py
    ```
@@ -50,12 +47,11 @@ _Note: Ensure you have Python 3.8 installed on your system._
 ### Step 3: Start the Image Receiver
 
 1. **Open a third terminal**.
-2. Navigate to your script's directory.
-3. Activate the Python 3.8 virtual environment:
+2. Activate the Python 3.8 virtual environment:
    ```bash
    source .venv/bin/activate
    ```
-4. Run the camera feed receiver script with Python 3.8:
+3. Run the camera feed receiver script with Python 3.8:
    ```bash
    python3.8 camera_feed_receiver.py
    ```
