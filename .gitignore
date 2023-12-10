@@ -1,1 +1,5 @@
+# Virtual environment
 .venv/*
+
+# YOLO model
+yolov8n.pt
